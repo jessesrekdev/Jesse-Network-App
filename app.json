@@ -1,0 +1,20 @@
+{
+    "app": {
+        "name": "Jesse Network App",
+        "version": "1.0",
+        "description": "Everything made simple easy and free",
+        "dev": "Jesse Srek",
+        "title": "Jesse Network App",
+        "stylesheet": "style.css"
+    },
+    "user": {
+        "name": "",
+        "username": "ell__ah",
+        "id": "5829",
+        "pfp": "Assets/IMG_20240206_205525_636.jpg"
+    },
+    "updates": {
+        "notify_title": "Our Community",
+        "url": "https://t.me/jesse_network"
+    }
+}

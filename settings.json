@@ -1,0 +1,11 @@
+{
+    "app": {
+        "theme": {
+            "light": false,
+            "dark": true
+        }
+    }, 
+    "user": {
+        "age": "16"
+    }
+}

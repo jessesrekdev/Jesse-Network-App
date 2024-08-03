@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(0, 0, 0);
+}
+
+#top {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+
+#top #profile #pfp {
+  width: 50px;
+  border-radius: 50%;
+  padding-right: 10px;
+  display: none;
+}
+
+#top #profile #nopfp {
+  background-color: orangered;
+  color: #fff;
+  width: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 2.5em;
+  text-align: center;
+  display: block;
+  padding: 1px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#top #profile {
+  color: rgb(255, 255, 255);
+  display: flex;
+  width: auto;
+}
+
+#top #profile #users_name {
+  margin-top: 0.6em;
+  font-size: 20px;
+}
+
+#top #updates {
+  color: rgb(255, 255, 255);
+  float: inline-end;
+  margin-right: 20px;
+  background-color: rgba(205, 219, 231, 0.288);
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.062) 2px 2px 0px;
+  display: flex;
+  align-items: center;
+}
+
+#top #updates #itemimg {
+  width: 1.9em;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#updatestxt {
+  font-size: 1em;
+}
+
+#body {
+  background-color: rgb(38, 51, 61);
+  margin-top: 4em;
+  height: 50.8em;
+  border-radius: 5em 5em 0 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  box-shadow: rgb(192, 83, 192) 2px 1px 80px 20px;
+  padding-top: 2em;
+}
+
+#must #age {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.308);
+  padding: 30px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 1em;
+  position: fixed;
+  top: 40%;
+  right: 10%;
+  left: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#must #age #my_age {
+  text-align: center;
+  display: block;
+  font-size: 3em;
+}
+
+.age_buttons {
+  text-align: center;
+}
+
+.age_buttons .age_button {
+  padding: 10px 10px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #a7aab84d;
+  border-radius: 0.5em;
+  transition: background-color 0.25sec;
+}
+
+.age_buttons .age_button:hover {
+  background-color: #f2f3f84d;
+}
+
+#age #age_description {
+  text-align: center;
+}
+
+#welcome_dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(7, 0, 0);
+  padding: 30px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 1em;
+  position: fixed;
+  top: 40%;
+  right: 10%;
+  left: 10%;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border: 2px solid #18ffff;
+}
+
+input:focus~label,
+input:valid~label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 2px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: black;
+}
+
+.task {
+  width: 10em;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+  background-color: rgba(255, 252, 252, 0.377);
+  border-radius: 1em;
+  text-align: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.3);
+  justify-content: center;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ;
+
+}
+
+#youtube svg {
+  margin: 0;
+  padding: 0;
+  color: rgb(197, 11, 11);
+}
+#website svg {
+    margin: 0;
+  padding: 0;
+  color: rgb(51, 11, 197);
+}
+#youtube h2 {
+  color: #fff;
+  font-size: 20px;
+}
+#website h2 {
+  color: #fff;
+  font-size: 20px;
+}

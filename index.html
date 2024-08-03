@@ -1,159 +1,53 @@
-const age_dialog = document.getElementById('age');
-const users_name = document.getElementById('users_name');
-const profile_pic = document.getElementById('pfp');
-const no_profile_pic = document.getElementById('nopfp');
-const titlle = document.getElementById('title');
-const stylesheet = document.getElementById('stylesheet');
-const input_text = document.getElementById('input_text');
-const input = document.getElementById('input');
-const welcome_dialo = document.getElementById('welcome_dialog');
-const updates = document.getElementById('updates');
+<!DOCTYPE html>
+<html lang="en">
 
-let age_count = 13;
-let required_age = 13;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">{{title}}</title>
+    <link id="stylesheet" rel="stylesheet" href="">
+</head>
 
-appOnStart();
+<body>
+    <div id="top">
+        <section id="profile">
+            <div id="nopfp">U</div>
+            <img src="" alt="Profile Picture" id="pfp">
+            <h1 id="users_name">Updating...</h1>
+        </section>
+        <section id="updates">Updating...</section>
+    </div>
+    <div id="body">
+        <div class="tasks">
+            <div class="task" id="youtube"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="70"
+                    fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                </svg><h2 id="youtube">Youtube Pro</h2>
+            </div>
+            <div class="task" id="website"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="70"
+                    fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
+                    <path
+                        d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                    <path
+                        d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z" />
+                </svg><h2 id="website_text">Official Website</h2>
+            </div>
+        </div>
+    </div>
+    <div id="nav"></div>
+    <div id="must">
+        <section id="age"></section>
+    </div>
+    <div id="welcome_dialog">
+        <div class="input-field">
+            <input id="input" type="text" required spellcheck="true">
+            <label id="input_text"></label>
+        </div>
+    </div>
+    <script src="script.js">
+        alert("Don't take anything here without credit");
+    </script>
+</body>
 
-const my_age = document.createElement('h1');
-const younger = document.createElement('button');
-const min_age = document.createElement('button');
-const older = document.createElement('button');
-const age_buttons = document.createElement('div');
-const age_description = document.createElement('h2');
-
-my_age.id = 'my_age';
-my_age.textContent = age_count;
-younger.textContent = '-';
-older.textContent = '+';
-min_age.textContent = 'Done';
-younger.id = 'younger';
-min_age.id = 'min_age';
-younger.className = 'age_button';
-min_age.className = 'age_button';
-older.className = 'age_button';
-age_buttons.id = 'age_buttons';
-age_buttons.className = 'age_buttons';
-age_description.textContent = 'How old are you ?'
-age_description.id = 'age_description';
-
-age_dialog.prepend(my_age);
-age_buttons.prepend(older);
-age_buttons.prepend(min_age);
-age_buttons.insertBefore(younger, min_age)
-age_dialog.append(age_buttons);
-age_dialog.prepend(age_description)
-
-older.onclick = function () {
-    age_count++;
-    my_age.textContent = age_count;
-    my_age.style.color = '#fff';
-    if (age_count >= 13) {
-        age_description.textContent = 'Click Done to confirm !';
-    }
-    else {
-        my_age.style.color = 'red';
-        age_description.textContent = 'You are under age !';
-    }
-}
-younger.onclick = function () {
-    age_count--;
-    my_age.textContent = age_count;
-    my_age.style.color = '#fff';
-    if (age_count < 13) {
-        age_description.textContent = 'You are under age !';
-        my_age.style.color = 'red';
-    }
-}
-min_age.onclick = function () {
-    if (age_count >= 13) {
-        my_age.style.color = 'rgb(14, 243, 26)';
-        age_dialog.style.display = 'none'; 3000();
-    }
-    else {
-        age_description.textContent = 'You need to be atleast ' + (required_age - age_count) + ' years older to join us ';
-    }
-}
-
-let username = 'me_srek';
-username = username.toLowerCase();
-username = username.padEnd(5, '.')
-if (username.startsWith(' ')) {
-    username = username.trim();
-}
-if (username.endsWith(' ')) {
-    username = username.trim();
-}
-if (username.includes(' ')) {
-    username = username.replaceAll(' ', '');
-}
-
-function appOnStart() {
-    app_data = 'app.json';
-    settings_data = 'settings.json';
-    fetch(app_data)
-        .then((response) => response.json())
-        .then((data) => {
-            users_name.textContent = data.user.name;
-            updates.innerHTML = '<img id="itemimg" src="Assets/IMG_20240206_205525_636.jpg" alt=""> <p id="updatestxt">' + data.updates.notify_title + '</p>';
-            updates.addEventListener('click', function () {
-                window.open(data.updates.url);
-            });
-            if (data.user.pfp.includes('.' & '/')) {
-                profile_pic.src = data.user.pfp;
-                no_profile_pic.style.display = 'none';
-                profile_pic.style.display = 'block';
-            }
-            else {
-                no_profile_pic.textContent = data.user.name.slice(0, 1);
-                no_profile_pic.style.display = 'block';
-                profile_pic.style.display = 'nonr';
-            }
-            if (data.user.name == '') {
-                input_text.textContent = 'Enter name';
-                users_name.textContent = 'New User';
-                input.addEventListener('keydown', function(event) {
-                    if (event.key === 'Enter') {
-                        // function when enter is clicked
-                }
-                });
-            }
-            else if (data.user.username == '') {
-                input_text.textContent = 'Create a username';
-            }
-            else if (data.user.id == '') {
-                const p = 3;
-                const min_id = 10000;
-                const max_id = 99999;
-                const my_id = Math.floor(Math.random() * (max_id - min_id + 1));
-                input_text.textContent = 'Your id:' + my_id;
-                input.disabled = true;
-            }
-            else {
-                input_text.textContent = 'Welcome  ' + data.user.name;
-                welcome_dialo.style.display = 'none';
-            }
-            title.textContent = data.app.title;
-            stylesheet.href = data.app.stylesheet;
-        });
-    function applySettings() {
-        fetch(settings_data)
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.app.theme.light == true) {
-                    console.log('light mode on');
-                }
-                else if (data.app.theme.dark == true) {
-                    console.log('dark mode on');
-                }
-                if (data.user.age >= 13) {
-                    age_dialog.style.display = "none";
-                }
-                else {
-                    age_dialog.style.display = "block";
-                }
-            });
-    }
-    applySettings();
-    userinfo();
-};
-
+</html>
